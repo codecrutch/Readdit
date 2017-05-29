@@ -1,0 +1,8 @@
+<form action="<%= comment_url %>" method="post">
+  <%= auth_token %>
+  <label type='hidden' name='comment[post_id]' value='post_id'
+  <label>Content
+  <input type="text" name="comment[content]" value="<%= @comment.content %>"></label>
+
+  <input type='submit' value='Add Comment'>
+</form>

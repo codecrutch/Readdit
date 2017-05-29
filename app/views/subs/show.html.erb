@@ -1,0 +1,10 @@
+ <%= @sub.title %>
+<br>
+<h1><%= "No " if @sub.posts.empty? %>Posts</h1>
+<a href="<%= new_post_url %>">Add Post</a> |
+<a href="<%= subs_url %>">Back to Subs</a>
+ <ul>
+   <% @sub.posts.each do |post| %>
+   <li><a href="<%= post_url(post) %>"><%= post.title %></a></li>
+   <% end %>
+ </ul>

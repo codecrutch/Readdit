@@ -1,0 +1,14 @@
+<a href="<%= subs_url %>">Back to Subs</a>
+<br>
+<a href="<%= edit_post_url(@post) %>">Edit Post</a>
+<ul>
+  <li><%= @post.title %> --
+    <br>
+      <p>Content: <%= @post.content %></p>
+  </li>
+</ul>
+
+<a href="<%= post_comments_new_url(@post) %>">Add Comment</a>
+  <% @post.comments.each do |comment| %>
+    <p><%= comment %></p>
+  <% end %>

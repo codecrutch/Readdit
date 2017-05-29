@@ -1,0 +1,10 @@
+<h1>Welcome to Readdit</h1>
+
+<a href="<%= new_sub_url %>">New Sub</a>
+<br>
+<h3>Date: <%= Time.now.strftime("%m-%d-%Y") %></h3>
+<ul>
+  <% @subs.each do |sub| %>
+    <li> <a href="<%= sub_url(sub) %>"><%= sub.title %></a></li>
+    <% end %>
+</ul>
